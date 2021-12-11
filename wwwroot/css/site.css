@@ -1,0 +1,15 @@
+@keyframes glow {
+    from {
+        font-size: 34px;
+    }
+
+    to {
+        font-size: 70px;
+    }
+}
+
+.expand {
+    animation-name: glow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}

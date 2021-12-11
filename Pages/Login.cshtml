@@ -1,0 +1,20 @@
+﻿@page
+@model DevFestAuth.Pages.LoginModel
+@{
+}
+ <div class="row" style="margin-top: 50px;">
+        <div class=" valign-wrapper" style="justify-content: center;">
+          <div id="firebaseui-auth-container" class=" blue lighten-3" style="height:50vh;" ></div>
+           <div id="customLoader" style="display: none;"><h1 class="blue-text lighten-3" >
+            Login in...<span class="expand">😎</span>
+          </h1></div>
+</div>
+      
+      </div>
+      @section code{
+           <script src="~/js/firebaseLogic.js"  asp-append-version="true" ></script>
+      }
+       
+  
+
+   

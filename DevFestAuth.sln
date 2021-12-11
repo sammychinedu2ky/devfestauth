@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.31911.260
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DevFestAuth", "DevFestAuth.csproj", "{38778B2D-C8FA-4893-85B5-BA5151C4E107}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{38778B2D-C8FA-4893-85B5-BA5151C4E107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38778B2D-C8FA-4893-85B5-BA5151C4E107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38778B2D-C8FA-4893-85B5-BA5151C4E107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38778B2D-C8FA-4893-85B5-BA5151C4E107}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9CE4972A-6257-4A0E-9117-B077F819A4B8}
+	EndGlobalSection
+EndGlobal
