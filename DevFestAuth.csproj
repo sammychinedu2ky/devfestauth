@@ -7,14 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Pages\Privacy.cshtml.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Content Remove="Pages\Privacy.cshtml" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="FirebaseAdmin" Version="2.2.0" />
   </ItemGroup>
 

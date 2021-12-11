@@ -1,5 +1,5 @@
 ﻿var firebaseConfig = {
-    //your conig",
+ //config
 };
 
 // Initialize Firebase
@@ -25,15 +25,22 @@ let uiConfig = {
             return false;
         },
     },
-
+    signInFlow: 'popup',
 
     signInOptions: [
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
-        firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      
+        {
+            provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+            customParameters: {
+                prompt: 'select_account'
+            }
+        },
         {
             provider: firebase.auth.GithubAuthProvider.PROVIDER_ID,
 
             scopes: ["repo"],
+           
         },
     ],
 };
@@ -45,14 +52,3 @@ firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE).then(() => {
 })
 
 
-let intervalId = setInterval(
-    function () {
-        let uiBlock = document.getElementsByClassName('firebaseui-container')
-        if (uiBlock.length < 1) {
-            let customLoader = document.getElementById('customLoader')
-            customLoader.style.display = "block"
-            clearInterval(intervalId);
-        }
-    },
-    500
-)

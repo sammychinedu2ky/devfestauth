@@ -11,7 +11,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
     options.LoginPath = "/Login";
 });
 var app = builder.Build();
-string? path = Environment.GetEnvironmentVariable("devfest");
+string path = Environment.GetEnvironmentVariable("devfest")!;
 
 FirebaseApp.Create(new AppOptions()
 {
