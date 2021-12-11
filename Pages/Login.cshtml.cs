@@ -23,33 +23,28 @@ namespace DevFestAuth.Pages
         {
 
             FirebaseToken decodedToken = await FirebaseAuth.DefaultInstance
-    .VerifyIdTokenAsync(token);
-
+            .VerifyIdTokenAsync(token);
             var email = decodedToken.Claims["email"] as string;
             var name = decodedToken.Claims["name"] as string;
             var picture = decodedToken.Claims["picture"] as string;
-
             var claims = new List<Claim>
-{
-    new Claim(ClaimTypes.Name,email),
-    new Claim("FullName", name),
-    new Claim("Picture", picture),
-};
-
-
+            {
+                new Claim(ClaimTypes.Name,email),
+                new Claim("FullName", name),
+                new Claim("Picture", picture),
+            };
             var claimsIdentity = new ClaimsIdentity(
                 claims, CookieAuthenticationDefaults.AuthenticationScheme);
             var authProperties = new AuthenticationProperties
             {
                 RedirectUri = "/Login",
                 IsPersistent = true,
-
             };
 
             await HttpContext.SignInAsync(
-    CookieAuthenticationDefaults.AuthenticationScheme,
-    new ClaimsPrincipal(claimsIdentity),
-    authProperties);
+                    CookieAuthenticationDefaults.AuthenticationScheme,
+                    new ClaimsPrincipal(claimsIdentity),
+                    authProperties);
             if (ReturnUrl != null) return Redirect(ReturnUrl);
             return Redirect("/");
         }
