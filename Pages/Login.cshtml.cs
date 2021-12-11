@@ -37,7 +37,6 @@ namespace DevFestAuth.Pages
                 claims, CookieAuthenticationDefaults.AuthenticationScheme);
             var authProperties = new AuthenticationProperties
             {
-                RedirectUri = "/Login",
                 IsPersistent = true,
             };
 

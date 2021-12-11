@@ -1,5 +1,5 @@
 ﻿var firebaseConfig = {
- //config
+   //config
 };
 
 // Initialize Firebase
@@ -26,8 +26,10 @@ let uiConfig = {
         },
     },
     signInFlow: 'popup',
+
     signInOptions: [
         firebase.auth.EmailAuthProvider.PROVIDER_ID,
+      
         {
             provider: firebase.auth.GoogleAuthProvider.PROVIDER_ID,
             customParameters: {
@@ -36,7 +38,9 @@ let uiConfig = {
         },
         {
             provider: firebase.auth.GithubAuthProvider.PROVIDER_ID,
+
             scopes: ["repo"],
+           
         },
     ],
 };
